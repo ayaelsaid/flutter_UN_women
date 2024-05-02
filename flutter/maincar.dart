@@ -27,6 +27,7 @@ void main() {
   myNewCarPrice.carPrice();
 
   var myNewCar = Car("red", manufactureYear: "2020", motorSpeed: "40 k/h");
+  print("=====================");
   myNewCar.showCarInfo();
   var myOwn = Car("red");
   print("=======================================");
