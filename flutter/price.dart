@@ -2,11 +2,15 @@ import 'class_car.dart';
 
 class Price extends Car {
 
-  String _price;
+  String price;
 
-  Price(this._price) : super("");
-
-  String getPrice() => _price;
+Price(String color,
+      {String? manufactureYear,
+      String? motorSpeed,
+      required this.price})
+      : super(color, manufactureYear: manufactureYear, motorSpeed: motorSpeed) {
+        }
+  String getPrice() => price;
 
   void carPrice() {
     print("The price of car is: ${getPrice()}");
