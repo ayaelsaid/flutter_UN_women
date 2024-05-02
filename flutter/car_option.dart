@@ -6,7 +6,7 @@ class Option extends Car{
   String safetyFeatures;
 
   Option(this.model, this.fuelEfficiency, this.safetyFeatures)
-      : super(""); // Initialize color in the parent class constructor
+      : super("");
 
   void showCarInfo() {
     super.showCarInfo();
