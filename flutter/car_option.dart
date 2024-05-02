@@ -1,22 +1,29 @@
 import 'class_car.dart';
 
 class Option extends Car{
-  String model;
-  String fuelEfficiency;
-  String safetyFeatures;
+String model;
+  String? fuelEfficiency;
+  String? safetyFeatures;
 
-Option(String color,
+  Option(String color,
       {String? manufactureYear,
       String? motorSpeed,
-       required this.model,
-       this.fuelEfficiency = '',
-       this.safetyFeatures= ''})
-      : super(color, manufactureYear: manufactureYear, motorSpeed: motorSpeed) {
-        }
+      required this.model,
+      this.fuelEfficiency,
+      this.safetyFeatures})
+      : super(color, manufactureYear: manufactureYear, motorSpeed: motorSpeed);
+
+  @override
   void showCarInfo() {
     super.showCarInfo();
-    print("The model of car is: $model");
-    print("The fuel efficiency is: $fuelEfficiency");
-    print("The safety features are: $safetyFeatures");
+    if (model.isNotEmpty) {
+      print("The model of car is: $model");
+    }
+    if (fuelEfficiency != null) {
+      print("The fuel efficiency is: $fuelEfficiency");
+    }
+    if (safetyFeatures != null) {
+      print("The safety features are: $safetyFeatures");
+    }
   }
 }
