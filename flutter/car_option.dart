@@ -5,9 +5,14 @@ class Option extends Car{
   String fuelEfficiency;
   String safetyFeatures;
 
-  Option(this.model, this.fuelEfficiency, this.safetyFeatures)
-      : super("");
-
+Option(String color,
+      {String? manufactureYear,
+      String? motorSpeed,
+       required this.model,
+       this.fuelEfficiency = '',
+       this.safetyFeatures= ''})
+      : super(color, manufactureYear: manufactureYear, motorSpeed: motorSpeed) {
+        }
   void showCarInfo() {
     super.showCarInfo();
     print("The model of car is: $model");
