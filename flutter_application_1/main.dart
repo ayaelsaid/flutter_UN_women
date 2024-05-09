@@ -19,7 +19,7 @@ void main() {
               color: Colors.white,
             ),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Column(
                   children: [
@@ -27,27 +27,39 @@ void main() {
                       color: Colors.orange,
                       child: Column(
                         children: [
-                          Image.asset('assets/download.jpeg'),
+                          Image.asset(
+                            'assets/download.jpeg',
+                            fit: BoxFit.contain,
+                            scale: 2,
+                          ),
                           Text('Vegetables Pizza'),
                         ],
                       ),
                     ),
-                    SizedBox(height: 10),
+                    SizedBox(height: 100),
                     Container(
                       color: Colors.orange,
                       child: Column(
                         children: [
-                          Image.asset('assets/download(1).jpeg'),
+                          Image.asset(
+                            'assets/download(1).jpeg',
+                            fit: BoxFit.contain,
+                            scale: 2,
+                          ),
                           Text('Cheese Pizza'),
                         ],
                       ),
                     ),
-                    SizedBox(height: 10),
+                    SizedBox(height: 100),
                     Container(
                       color: Colors.orange,
                       child: Column(
                         children: [
-                          Image.asset('assets/download(2).jpeg'),
+                          Image.asset(
+                            'assets/download(2).jpeg',
+                            fit: BoxFit.contain,
+                            scale: 2,
+                          ),
                           Text('Box of Fries'),
                         ],
                       ),
