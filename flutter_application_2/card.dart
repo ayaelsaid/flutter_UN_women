@@ -62,12 +62,12 @@ class MyApp extends StatelessWidget {
                   ],
                 ),
               ),
-            ], // children
-          ), // Column
-        ), // Padding
-      ), // Scaffold
-    ); //MaterialApp
-  }i
+            ], // End of Column children
+          ), // End of Column
+        ), // End of Padding
+      ), // End of Scaffold
+    ); // End of MaterialApp
+  }
 
   Widget getCard(String myText) {
     return Padding(
