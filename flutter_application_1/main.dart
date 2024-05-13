@@ -26,7 +26,6 @@ class MyApp extends StatelessWidget {
               ),
               IconButton(
                 onPressed: () {
-                  // Add onPressed logic for Twitter icon
                 },
                 icon: Image.asset(
                   'assets/twitter.png',
