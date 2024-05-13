@@ -11,25 +11,45 @@ class MyApp extends StatelessWidget {
           title: Row(
             children: [
               Expanded(
-                child: Text(
-                  "WOW Pizza",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold,
+                child: Padding(
+                  padding: EdgeInsets.only(
+                      left: 10), // Adjust the left padding as needed
+                  child: Text(
+                    "WOW Pizza",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
               ),
-              Image.asset(
-                'assets/twitter.png',
-                fit: BoxFit.contain,
-                height: 30,
-                width: 30,
+              IconButton(
+                onPressed: () {
+                  // Add onPressed logic for Twitter icon
+                },
+                icon: Image.asset(
+                  'assets/twitter.png',
+                  fit: BoxFit.contain,
+                  height: 50,
+                  width: 50,
+                ),
               ),
-              SizedBox(
-                width: 10,
+              SizedBox(width: 1),
+              Center(
+                child: Padding(
+                  padding: const EdgeInsets.only(
+                      right: 10), // Adjust the right padding as needed
+                  child: Center(
+                    child: IconButton(
+                      onPressed: () {
+                        // Add onPressed logic for Facebook icon
+                      },
+                      icon: Icon(Icons.facebook, size: 50),
+                    ),
+                  ),
+                ),
               ),
-              Icon(Icons.facebook),
             ],
           ),
           backgroundColor: Colors.orange,
@@ -52,7 +72,7 @@ class MyApp extends StatelessWidget {
                     Padding(
                       padding: EdgeInsets.symmetric(vertical: 40),
                       child: Container(
-                        margin: EdgeInsets.all(10),
+                        margin: EdgeInsets.all(5),
                         width: double.infinity,
                         decoration: BoxDecoration(
                           color: Colors.white,
@@ -80,9 +100,10 @@ class MyApp extends StatelessWidget {
 
   Widget getButtonCard(String myText) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 10),
+      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
+          padding: EdgeInsets.all(10), // Padding here
           backgroundColor: Colors.white,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.horizontal(
@@ -91,6 +112,7 @@ class MyApp extends StatelessWidget {
             ),
           ),
         ),
+        onPressed: () {},
         child: Text(
           myText,
           style: const TextStyle(
@@ -99,7 +121,6 @@ class MyApp extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
-        onPressed: () {},
       ),
     );
   }
