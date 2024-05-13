@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
               Expanded(
                 child: Padding(
                   padding: EdgeInsets.only(
-                      left: 10), // Adjust the left padding as needed
+                      left: 10),
                   child: Text(
                     "WOW Pizza",
                     style: TextStyle(
@@ -39,11 +39,10 @@ class MyApp extends StatelessWidget {
               Center(
                 child: Padding(
                   padding: const EdgeInsets.only(
-                      right: 10), // Adjust the right padding as needed
+                      right: 10),
                   child: Center(
                     child: IconButton(
                       onPressed: () {
-                        // Add onPressed logic for Facebook icon
                       },
                       icon: Icon(Icons.facebook, size: 50),
                     ),
@@ -100,10 +99,10 @@ class MyApp extends StatelessWidget {
 
   Widget getButtonCard(String myText) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+      padding: const EdgeInsets.symmetric(vertical: 10),
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          padding: EdgeInsets.all(10), // Padding here
+          padding: EdgeInsets.all(10),
           backgroundColor: Colors.white,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.horizontal(
