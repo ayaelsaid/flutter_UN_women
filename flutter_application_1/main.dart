@@ -109,7 +109,7 @@ void main() {
                                 ),
                                 SizedBox(width: 10),
                                 Text('Box of Fries'),
-                                                            ],
+                              ],
                             ),
                           ],
                         ),
