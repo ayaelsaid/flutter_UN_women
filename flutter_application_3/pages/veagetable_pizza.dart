@@ -5,12 +5,14 @@ class VegetablePizza extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-   return Scaffold(
-     body: Center(
-       child: Container(
-          child: Image.asset('assets/download.jpeg'),
+    return Scaffold(
+      
+      body: Center(
+        child: Hero(
+          tag: 'vpizzaImage',
+          child: Image.asset('assets/pizaaf.jpg'),
         ),
-     ),
-   );
+      ),
+    );
   }
 }

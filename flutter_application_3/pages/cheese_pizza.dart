@@ -6,9 +6,11 @@ class CheesePizza extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      
       body: Center(
-        child: Container(
-          child: Image.asset('assets/cheese.png'),
+        child: Hero(
+          tag: 'chpizzaImage',
+          child: Image.asset('assets/pizaaf.jpg'),
         ),
       ),
     );
