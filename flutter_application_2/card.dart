@@ -11,25 +11,41 @@ class MyApp extends StatelessWidget {
           title: Row(
             children: [
               Expanded(
-                child: Text(
-                  "WOW Pizza",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold,
+                child: Padding(
+                  padding: EdgeInsets.only(left: 10),
+                  child: Text(
+                    "WOW Pizza",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
               ),
-              Image.asset(
-                'assets/twitter.png',
-                fit: BoxFit.contain,
-                height: 30,
-                width: 30,
+              IconButton(
+                onPressed: () {
+                  // Add onPressed logic for Twitter icon
+                },
+                icon: Image.asset(
+                  'assets/twitter.png',
+                  fit: BoxFit.contain,
+                  height: 30,
+                  width: 30,
+                ),
               ),
-              SizedBox(
-                width: 10,
+              SizedBox(width: 1),
+              Center(
+                child: Padding(
+                  padding: const EdgeInsets.only(right: 10),
+                  child: Center(
+                    child: IconButton(
+                      onPressed: () {},
+                      icon: Icon(Icons.facebook, size: 30),
+                    ),
+                  ),
+                ),
               ),
-              Icon(Icons.facebook),
             ],
           ),
           backgroundColor: Colors.orange,
@@ -38,22 +54,32 @@ class MyApp extends StatelessWidget {
           padding: const EdgeInsets.all(10.0),
           child: Column(
             children: [
+              Padding(padding: EdgeInsets.symmetric(horizontal: 10)),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  getCard('Vegetable Pizza'),
-                  getCard('Cheese Pizza'),
-                  getCard('Fries'),
+                  getButtonCard('Vegetable Pizza'),
+                  getButtonCard('Cheese Pizza'),
+                  getButtonCard('Fries'),
                 ],
               ),
-              Container(
-                padding: EdgeInsets.all(8),
+              Center(
                 child: Column(
                   children: [
-                    Padding(padding: EdgeInsets.symmetric(vertical: 40)),
-                    Image.asset(
-                      'assets/pizaaf.jpg',
-                      fit: BoxFit.cover,
+                    Padding(
+                      padding: EdgeInsets.symmetric(vertical: 40),
+                      child: Container(
+                        margin: EdgeInsets.all(5),
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                        ),
+                        child: Image.asset(
+                          'assets/pizaaf.jpg',
+                          fit: BoxFit.cover,
+                          width: double.maxFinite,
+                        ),
+                      ),
                     ),
                     Text(
                       'Hi, I\'m the Pizza Assistant,\nwhat can I help you order?',
@@ -62,24 +88,28 @@ class MyApp extends StatelessWidget {
                   ],
                 ),
               ),
-            ], //  children
-          ), // Column
-        ), // Padding
-      ), // Scaffold
-    ); // MaterialApp
-  }
-
-  Widget getCard(String myText) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 10),
-      child: Card(
-        color: Colors.white,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.horizontal(
-            left: Radius.circular(40),
-            right: Radius.circular(40),
+            ],
           ),
         ),
+      ),
+    );
+  }
+
+  Widget getButtonCard(String myText) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 10),
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          padding: EdgeInsets.all(10),
+          backgroundColor: Colors.white,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.horizontal(
+              left: Radius.circular(40),
+              right: Radius.circular(40),
+            ),
+          ),
+        ),
+        onPressed: () {},
         child: Text(
           myText,
           style: const TextStyle(
