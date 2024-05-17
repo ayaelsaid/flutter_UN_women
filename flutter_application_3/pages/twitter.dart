@@ -25,7 +25,6 @@ class TwitterPage extends StatelessWidget {
                 ),
               ),
             ),
-            // Add spacing between elements
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: const Text(
@@ -53,9 +52,7 @@ class TwitterPage extends StatelessWidget {
               child: Container(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () {
-                    // Add your sign-in logic here
-                  },
+                  onPressed: () {},
                   child: const Text(
                     'Sign in',
                     style: TextStyle(color: Colors.white),
@@ -73,9 +70,7 @@ class TwitterPage extends StatelessWidget {
               width: double.infinity,
               margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
               child: ElevatedButton(
-                onPressed: () {
-                  // Add your login logic here
-                },
+                onPressed: () {},
                 child: const Text(
                   'Log in',
                   style: TextStyle(color: Colors.blue),
@@ -97,7 +92,6 @@ class TwitterPage extends StatelessWidget {
                   horizontal: 20), // Adjust padding as needed
               child: Stack(
                 children: [
-                  // Left-aligned image
                   Positioned.fill(
                     child: Align(
                       alignment: Alignment.centerRight,
@@ -105,11 +99,10 @@ class TwitterPage extends StatelessWidget {
                         'assets/downloadtwitterblue.png',
                         fit: BoxFit.cover,
                         height: 300,
-                        width: 700, // Adjust height to match container height
+                        width: 700, 
                       ),
                     ),
                   ),
-                  // Overlaying column
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 400),
                     child: Center(
@@ -144,7 +137,7 @@ class TwitterPage extends StatelessWidget {
             onPressed: () {},
             icon: Icon(icon, color: Colors.white),
           ),
-          const SizedBox(width: 8), // Add some spacing between icon and text
+          const SizedBox(width: 8),
           Text(
             text,
             style: const TextStyle(
