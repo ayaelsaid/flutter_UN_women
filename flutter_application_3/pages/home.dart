@@ -11,7 +11,7 @@ class HomePage extends StatelessWidget {
         appBar: CustomAppBar(),
         body: Column(
           children: [
-            ExecuteAllButton(context), // Wrapping executeAllButton with Column
+            ExecuteAllButton(context), 
             Center(
               child: Column(
                 children: [
