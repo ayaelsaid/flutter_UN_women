@@ -17,15 +17,14 @@ class Fries extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10),
               child: Container(
-                width: 300, // Adjust the size as needed
-                height:
-                    300, // Ensure the width and height are equal for a circle
+                width: 300, 
+                height: 300, 
                 decoration: BoxDecoration(
-                  shape: BoxShape.circle, // Set the shape to circle
+                  shape: BoxShape.circle,
                   image: DecorationImage(
                     image: AssetImage(
-                        'assets/download(2).jpeg'), // Path to the image asset
-                    fit: BoxFit.cover, // Cover the entire circle
+                        'assets/download(2).jpeg'),
+                    fit: BoxFit.cover,
                   ),
                 ),
               ),
