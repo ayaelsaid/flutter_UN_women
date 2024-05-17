@@ -75,9 +75,7 @@ class FacebookPage extends StatelessWidget {
                   margin:
                       const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
                   child: ElevatedButton(
-                    onPressed: () {
-                      // Add your login logic here
-                    },
+                    onPressed: () {},
                     child: const Text(
                       'Log in',
                       style: TextStyle(color: Colors.white),
@@ -95,9 +93,7 @@ class FacebookPage extends StatelessWidget {
                   height: 50,
                   margin: const EdgeInsets.symmetric(vertical: 10),
                   child: ElevatedButton(
-                    onPressed: () {
-                      // Add your create account logic here
-                    },
+                    onPressed: () {},
                     child: const Text(
                       'Create new account',
                       style: TextStyle(color: Colors.white),
@@ -111,9 +107,7 @@ class FacebookPage extends StatelessWidget {
                   ),
                 ),
                 TextButton(
-                  onPressed: () {
-                    // Add your forgot password logic here
-                  },
+                  onPressed: () {},
                   child: const Text(
                     'Forget your password',
                     style: TextStyle(color: Colors.blue),
@@ -146,14 +140,11 @@ class FacebookPage extends StatelessWidget {
                       getTextButton('Русский'),
                       getTextButton('Español'),
                       IconButton(
-                        onPressed: () {
-                          // Add your onPressed logic for the IconButton here
-                        },
+                        onPressed: () {},
                         icon: Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 15),
                           child: Icon(Icons.add),
                         ),
-                        // Use the add icon
                         color: Colors.blue,
                       ),
                     ],
@@ -169,9 +160,7 @@ class FacebookPage extends StatelessWidget {
 
   Widget getTextButton(String text) {
     return TextButton(
-      onPressed: () {
-        // Add logic for the button based on the text label
-      },
+      onPressed: () {},
       child: Text(
         text,
         style: TextStyle(color: Colors.blue),
