@@ -1,53 +1,59 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_3/wedgets/bar.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('WOW Pizza'),
-        backgroundColor: Colors.orange,
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: Column(
+    return MaterialApp(
+      home: Scaffold(
+        appBar: CustomAppBar(),
+        body: Column(
           children: [
-            Padding(padding: const EdgeInsets.symmetric(horizontal: 10)),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                getButtonCard(context, '/vegetablePizza', 'Vegetable Pizza'),
-                getButtonCard(context, '/cheesePizza', 'Cheese Pizza'),
-                getButtonCard(context, '/fries', 'Fries'),
-              ],
-            ),
+            ExecuteAllButton(context), // Wrapping executeAllButton with Column
             Center(
               child: Column(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 40),
+                    padding: const EdgeInsets.symmetric(vertical: 10),
                     child: Container(
-                      margin: const EdgeInsets.all(5),
+                      padding: const EdgeInsets.symmetric(horizontal: 5),
                       width: double.infinity,
+                      height: 400,
                       decoration: const BoxDecoration(
                         color: Colors.white,
                       ),
                       child: Image.asset(
                         'assets/pizaaf.jpg',
                         fit: BoxFit.cover,
-                        width: double.maxFinite,
                       ),
                     ),
                   ),
                   const Text(
                     'Hi, I\'m the Pizza Assistant,\nwhat can I help you order?',
-                    style: TextStyle(fontSize: 30, color: Colors.black),
+                    style: TextStyle(fontSize: 40, color: Colors.black),
                   ),
                 ],
               ),
             ),
+          ],
+        ),
+        // ],
+      ),
+    );
+  }
+
+  Widget ExecuteAllButton(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 10),
+      child: Container(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            getButtonCard(context, '/vegetablePizza', 'Vegetable Pizza'),
+            getButtonCard(context, '/cheesePizza', 'Cheese Pizza'),
+            getButtonCard(context, '/fries', 'Fries'),
           ],
         ),
       ),
@@ -56,7 +62,7 @@ class HomePage extends StatelessWidget {
 
   Widget getButtonCard(BuildContext context, String route, String text) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 10),
+      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 25),
       child: InkWell(
         onTap: () {
           Navigator.pushNamed(context, route);
