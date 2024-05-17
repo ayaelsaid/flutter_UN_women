@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      color: Colors.white,
+      debugShowCheckedModeBanner: false,
       onGenerateRoute: (settings) {
         switch (settings.name) {
           case '/':
@@ -28,6 +28,7 @@ class MyApp extends StatelessWidget {
             return MaterialPageRoute(builder: (context) => const Fries());
           case '/webView':
             return MaterialPageRoute(builder: (context) => const WebViewPage());
+
           default:
             return null;
         }
