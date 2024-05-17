@@ -18,15 +18,15 @@ class VegetablePizza extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
                 child: Container(
-                  width: 300, // Adjust the size as needed
+                  width: 300,
                   height:
-                      300, // Ensure the width and height are equal for a circle
+                      300, 
                   decoration: BoxDecoration(
-                    shape: BoxShape.circle, // Set the shape to circle
+                    shape: BoxShape.circle,
                     image: DecorationImage(
                       image: AssetImage(
-                          'assets/download.jpeg'), // Path to the image asset
-                      fit: BoxFit.cover, // Cover the entire circle
+                          'assets/download.jpeg'),
+                      fit: BoxFit.cover,
                     ),
                   ),
                 ),
