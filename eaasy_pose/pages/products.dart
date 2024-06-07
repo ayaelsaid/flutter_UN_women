@@ -70,25 +70,6 @@ class _ProductsPageState extends State<ProductsPage> {
           children: [
             TextField(
               onChanged: (text) async {
-                // if (text == '') {
-                //   getProducts();
-                //   return;
-                // }
-
-                // var sqlHelper = await GetIt.I.get<SqlHelper>();
-                // var data = await sqlHelper.db!.rawQuery("""
-                // Select * from categories
-                // where name like '%$text%' OR description like '%$text%'
-                // """);
-                // if (data.isNotEmpty) {
-                //   categories = [];
-                //   for (var item in data) {
-                //     categories?.add(Category.fromJson(item));
-                //   }
-                // } else {
-                //   categories = [];
-                // }
-                // setState(() {});
               },
               decoration: InputDecoration(
                 prefixIcon: Icon(Icons.search),
