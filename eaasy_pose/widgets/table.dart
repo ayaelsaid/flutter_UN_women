@@ -19,9 +19,7 @@ class AppTable extends StatelessWidget {
       ),
       child: PaginatedDataTable2(
         onPageChanged: (index) {
-          // print
         },
-        // availableRowsPerPage: const <int>[1],
         hidePaginator: false,
         empty: const Center(
           child: Text('No Data Found'),
